@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>Insurance Result</title>
+</head>
+
+    <table>
+        <TR>
+            <TH> Features</TH>
+            <TH> Value </TH>
+        </TH>
+
+        <TR>
+            <TD> Age: </TD>
+            <TD> {{charges["age"]}} </TD>
+        </TR>
+
+        <TR>
+            <TD> Gender: </TD>
+            <TD> {{charges["gender"]}} </TD>
+        </TR>
+        <TR>
+            <TD> bmi: </TD>
+            <TD> {{charges["bmi"]}} </TD>
+        </TR>
+        <TR>
+            <TD> children: </TD>
+            <TD> {{charges["children"]}} </TD>
+        </TR>
+        <TR>
+            <TD> smoker: </TD>
+            <TD> {{charges["smoker"]}} </TD>
+        </TR>
+        <TR>
+            <TD> region: </TD>
+            <TD> {{charges["region"]}} </TD>
+        </TR>
+        <TR>
+            <TD> <b> Result: </b> </TD>
+            <TD> <b>{{charges["result"]}} </b> </TD>
+        </TR>
+    </table>
+
+</html>
