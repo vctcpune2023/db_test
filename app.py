@@ -1,6 +1,7 @@
 from  flask import Flask,request,jsonify,render_template
 import config
 from Model.utils import MedicalInsurance
+from query import insert_query
 
 app = Flask(__name__)
 
@@ -21,6 +22,11 @@ def get_medicalInsurance():
 
     medical = MedicalInsurance(age,gender,bmi,smoker,children,region)
     charges = medical.get_predicted_charges()
+    charges = float(charges)
+    record = (age,gender,bmi,smoker,children,region,charges)
+    insert_query(record)
+            
+    print(record)
     data_dict = dict(data)
     data_dict["result"] = charges
     return render_template("result.html",charges=data_dict)
